@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Ginástica Laboral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Adiciona o FontAwesome para ícones -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f4f4f4;
+        }
+        h2{
+            margin: 0
+        }
+        header {
+            background: linear-gradient(to right, #151656, #6da2f3);
+            color: #fff;
+            padding-top: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            margin-bottom: 2px;
+        }
+        nav a:hover {
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
+            margin-bottom: 0px;
+        }
+        main .container{
+            margin: 0 20%
+        }
+        #opcao1{
+            height: 500px;
+        
+        }
+        #opcao1{
+            position: relative;
+        }
+        #opcao1 h2{
+            position: absolute;
+            bottom: 0;
+            margin: 30px;
+            color: #FFF;
+            width: 33%;
+        }
+        #beneficios h2{
+            padding: 20px 0px;
+        }
+        #beneficios, #opcao4{
+            padding-bottom: 50px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #beneficios .grafico{
+            display: flex;
+            justify-content: space-around;
+        }
+        #beneficios .grafico img{
+            width: 30%;
+            height: 50%;
+        }
+        #beneficios .grafico .infos p{
+            padding: 10px 50px 10px 0px;
+        }
+        #opcao3 div{
+            color: #fff;
+        }
+        #opcao3{
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius:8px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            background-color: #586bcd;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #opcao3 img{
+            width: 100%;
+        }
+        #opcao3 p{
+            padding: 20px;
+            margin-top: 0;
+        }
+        figcaption{
+            height: 100%;
+            background-position: 50% 25%;
+            background-image: url(img/ginastica-laboral.jpg);
+            background-repeat: no-repeat;  
+        }
+        h2 {
+            color: #333;
+        }
+        #opcao3 h2{
+            color: #fff;
+            padding: 20px;
+        }
+        #opcao4 {
+            border-radius: 8px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer p{
+            background: linear-gradient(to right, #151656, #6da2f3);
+            padding: 20px;
+            margin: 0px;
+            color:#fff;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Transição de Menu */
+        nav {
+            transition: transform 0.3s ease;
+            left: 0;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            z-index: 998;
+        }
+        nav a{
+            padding: 15px 20px;
+        }
+        nav.open {
+            transform: translateY(0);
+        }
+        .menu-icon{
+            display: none;
+        }
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 4px;
+            transition: all 0.3s ease-in-out;
+        }
+        .menu-icon.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .menu-icon.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-icon.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        } 
+        @media (max-width: 1000px) {
+            #beneficios .grafico .infos p{
+                padding: 5px 50px 5px 0px;
+            }
+        }
+        @media (max-width: 1000px) {
+            #beneficios .grafico{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 999;
+                cursor: pointer;
+                color: #fff;
+            }
+            .logo{
+                margin: 0;
+                padding-bottom: 20px;
+            }
+            #opcao1 h2{
+                width: 90%;
+            }
+            nav{
+                background: linear-gradient(to right, #151656d9, #6da2f3);
+                transform: translateY(-160%);
+                flex-direction: column;
+                position: absolute;
+                margin: 0;
+            }
+            figcaption{
+                background-size: cover;
+                height: 100%;
+                background-image: url('img/ginastica-laboral-mobile.png');
+                background-repeat: no-repeat;
+                background-position:center
+            }
+            main{
+                padding: 0px;
+            }
+            main .container{
+                margin: 0 10%;
+            }
+            #beneficios .grafico img{
+                width: 170px;
+                height: 170px;
+            }
+            #opcao3 img{
+                width: 100%;
+            }   
+        }
+        @media (max-width: 400px) {
+            main .container{
+                margin: 0 5%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">FLEXCORP</h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <a href="#beneficios">BENEFÍCIOS</a>
+            <a href="#opcao4">SOBRE</a>
+            <a href="#footer">CONTATO</a>
+        </nav>
+    </header>
+    <main>
+        <section id="opcao1">
+            <figcaption>
+                <h2>A Flexcorp é especializada em proporcionar qualidade de vida aos colaboradores de empresas.</h2>
+            </figcaption>
+            <!-- Conteúdo da opção 1 -->
+        </section>
+        <div class="container">
+            <section id="beneficios">
+                <h2>Benefícios da GL</h2>
+                <div class="grafico">
+                    <img src="img/grafico.png" alt="">
+                    <div class="infos">
+                        <p style="color: #6ce5e8;">Aumento da produtividade</p>
+                        <p style="color: #41b8d5;">Melhora da imagem institucional</p>
+                        <p style="color: #2d8bba;">Diminuição da rotatividade</p>
+                        <p style="color: #2f5f98;">Diminuição no índice de ausência</p>
+                        <p style="color: #31356e;">Diminuí custos médicos</p>        
+                    </div>
+                </div>
+                <!-- Conteúdo da opção 3 -->
+            </section>
+            <section id="opcao3">
+                <div>
+                    <h2>Saúde e Bem-Estar</h2>
+                    <p>Priorizar a promoção da saúde física e mental dos trabalhadores, visando melhorar a qualidade de vida no ambiente de trabalho.</p>
+                    <img src="img/ginastica-laboral2.jpg" alt="">
+                    <p>Para diminuir o comportamento sedentário e desenvolver hábitos saudáveis utilizamos a Ginástica Laboral, que é realizada dentro da empresa para o ben-estar físico e mental dos colaboradores.</p>
+                </div>
+                <!-- Conteúdo da opção 2 -->
+            </section>
+            <section id="opcao4">
+                <h2>Sobre a Flexcorp</h2>
+                <p>A Flexcorp é especializada em proporcionar qualidade de vida aos colaboradores de empresas.</p>
+                <p>Através da Ginástica Laboral, desenvolvemos diversos benefícios, performando os colaboradores para um excelente desempenho dentro e fora da empresa.</p>
+                <p>O dia a dia dos colaboradores de empresas envolve muitas horas sentados, trabalhando por muito tempo em uma só posição. Segundo a OMS é necessário praticar de 150 a 300 minutos semanais de atividades físicas.</p>
+                <p>Para diminuir o comportamento sedentário e desenvolver hábitos saudáveis utilizamos a Ginástica Laboral, que é realizada dentro da empresa para o ben-estar físico e mental dos colaboradores.</p>
+                <!-- Conteúdo da opção 4 -->
+            </section>    
+        </div>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
